@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @game_category.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @game_category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_category_path(@game_category) %> |
+<%= link_to 'Back', game_categories_path %>

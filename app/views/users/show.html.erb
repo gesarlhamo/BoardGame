@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @user.picture, :width => "200", :height => "200" %>
+<%= @user.name %></h1>
+</p>
+
+<p>
+	<%= link_to "Edit Profile", edit_user_path(@user)%>
+<p>
+  <%= @user.email %>
+</p>
+
+<ul>
+	<h1> My Top 5 Games </h1> 
+	<li> Starter League-opoly </li>
+	<li> Chess </li>
+	<li> Candy Land	</li>
+	<li> Sorry </li>
+	<li> Mouse Trap </li>
+	
+<ul>	
+
+	<ul>
+		<h1> My Game Preferences: </h1>
+		<% @user.game_categories.each do |game| %>
+			<li> <%= game.name %></li>
+
+		<% end %>		
+	<ul>
+
+
+<%= link_to 'Back', users_path %>
+

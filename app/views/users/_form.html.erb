@@ -42,7 +42,7 @@
 			<% for game_category in GameCategory.find(:all) %>
 			<div>
 				<%= check_box_tag "user[game_category_ids][]", game_category.id, @user.game_categories.include?(game_category) %>
-				<%= game_category.name %>
+				<%= game_category.name.capitalize %>
 			</div>
 			<% end %>
 		</p>
@@ -65,3 +65,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+

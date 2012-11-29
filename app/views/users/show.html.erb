@@ -24,7 +24,7 @@
 	<ul>
 		<h1> My Game Preferences: </h1>
 		<% @user.game_categories.each do |game| %>
-			<li> <%= game.name %></li>
+			<li> <%= game.name.capitalize %></li>
 
 		<% end %>		
 	<ul>

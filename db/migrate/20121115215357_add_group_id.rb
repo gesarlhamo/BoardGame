@@ -4,5 +4,6 @@ class AddGroupId < ActiveRecord::Migration
   end
 
   def down
+    remove_column :users, :group_id, :string 
   end
 end

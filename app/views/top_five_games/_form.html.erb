@@ -1,0 +1,41 @@
+<%= form_for(@top_five_game) do |f| %>
+  <% if @top_five_game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@top_five_game.errors.count, "error") %> prohibited this top_five_game from being saved:</h2>
+
+      <ul>
+      <% @top_five_game.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_game_id %><br />
+    <%= f.number_field :first_game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :second_game_id %><br />
+    <%= f.number_field :second_game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :third_game_id %><br />
+    <%= f.number_field :third_game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fourth_game_id %><br />
+    <%= f.number_field :fourth_game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fifth_game_id %><br />
+    <%= f.number_field :fifth_game_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,6 +2,10 @@ BoardGame::Application.routes.draw do
   
   
 
+  resources :games
+
+  resources :top_five_games
+
   resources :game_categories
 
   get "sessions/login_page", :as => 'login_page'

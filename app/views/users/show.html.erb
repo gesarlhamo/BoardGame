@@ -13,12 +13,14 @@
 
 <ul>
 	<h1> My Top 5 Games </h1> 
-	<li> Starter League-opoly </li>
-	<li> Chess </li>
-	<li> Candy Land	</li>
-	<li> Sorry </li>
-	<li> Mouse Trap </li>
 	
+	<li> <%= @user.top_five_game.first_game.name %> </li>
+	<li> <%= @user.top_five_game.second_game.name %> </li>
+	<li> <%= @user.top_five_game.third_game.name %> </li>
+	<li> <%= @user.top_five_game.fourth_game.name %> </li>
+	<li> <%= @user.top_five_game.fifth_game.name %> </li>
+	
+		
 <ul>	
 
 	<ul>

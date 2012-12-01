@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @top_five_game.user_id %>
+</p>
+
+<p>
+  <b>First game:</b>
+  <%= @top_five_game.first_game_id %>
+</p>
+
+<p>
+  <b>Second game:</b>
+  <%= @top_five_game.second_game_id %>
+</p>
+
+<p>
+  <b>Third game:</b>
+  <%= @top_five_game.third_game_id %>
+</p>
+
+<p>
+  <b>Fourth game:</b>
+  <%= @top_five_game.fourth_game_id %>
+</p>
+
+<p>
+  <b>Fifth game:</b>
+  <%= @top_five_game.fifth_game_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_top_five_game_path(@top_five_game) %> |
+<%= link_to 'Back', top_five_games_path %>

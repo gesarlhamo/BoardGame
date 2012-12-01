@@ -1,4 +1,5 @@
 <%= form_for(@user) do |f| %>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -46,11 +47,32 @@
 			</div>
 			<% end %>
 		</p>
+
+<h1> Top Five Games </h1>
+	<%= f.fields_for :top_five_game do |toplist| %>
 	
-
-
-
-
+		<div class="field">
+		    <%= toplist.label :first_game %><br />
+		    <%= toplist.text_field :first_game %>
+		  </div>
+		  <div class="field">
+		    <%= toplist.label :second_game %><br />
+		    <%= toplist.text_field :second_game %>
+		  </div>
+		  <div class="field">
+		    <%= toplist.label :third_game %><br />
+		    <%= toplist.text_field :third_game %>
+		  </div>
+		  <div class="field">
+		    <%= toplist.label :fourth_game %><br />
+		    <%= toplist.text_field :fourth_game %>
+		  </div>
+		  <div class="field">
+		    <%= toplist.label :fifth_game %><br />
+		    <%= toplist.text_field :fifth_game %>
+		  </div>
+	
+	<% end %>
 
   <div class="field">
     <%= f.label :password %><br />
@@ -61,6 +83,12 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
+
+<div class="field">
+    <%= f.label :top_five_game %><br />
+    <%= f.collection_select :top_five_game, Game.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
